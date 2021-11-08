@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="containerAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="421.0" prefHeight="750.0" prefWidth="600.0" style="-fx-border-color: #F05700; -fx-border-width: 5px; -fx-border-radius: 25px; -fx-background-radius: 25px; -fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.frontControl">
+    <children>
+
+        <Pane layoutX="4.0" layoutY="22.0" prefHeight="150.0" prefWidth="592.0">
+            <children>
+                <Label alignment="CENTER" layoutX="213.0" layoutY="2.0" prefHeight="25.0" prefWidth="167.0" text="Ubicacion del archivo:" textAlignment="CENTER">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font></Label>
+                <Label fx:id="pathLBL" alignment="CENTER" layoutX="47.0" layoutY="41.0" prefHeight="32.0" prefWidth="498.0" style="-fx-border-radius: 25px; -fx-background-color: #EEEEEE; -fx-background-radius: 25px;" text="PATH:" textAlignment="CENTER">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font></Label>
+                <Button fx:id="browseButton" alignment="CENTER" layoutX="47.0" layoutY="86.0" mnemonicParsing="false" onAction="#browseButtonAction" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #FFF; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #F05700; -fx-border-width: 2px;" text="BUSCAR..." textAlignment="CENTER">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font></Button>
+                <Button fx:id="loadButton" alignment="CENTER" disable="true" layoutX="410.0" layoutY="86.0" mnemonicParsing="false" onAction="#loadButtonAction" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #F05700; -fx-background-radius: 15px; -fx-border-radius: 15px;" text="LEER ARCHIVO" textAlignment="CENTER">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font></Button>
+            </children></Pane>
+        <Button fx:id="closeButton" layoutX="442.0" layoutY="688.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #F05700; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="SALIR">
+            <font>
+                <Font name="MS Outlook" size="14.0" />
+            </font></Button>
+        <Pane fx:id="pane2" layoutX="96.0" layoutY="172.0" prefHeight="64.0" prefWidth="408.0">
+            <children>
+                <Label fx:id="currentLBL" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="20.0" prefHeight="25.0" prefWidth="346.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 25px; -fx-border-radius: 25px;">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font></Label>
+            </children>
+        </Pane>
+        <Pane fx:id="pane3" disable="true" layoutX="26.0" layoutY="257.0" prefHeight="132.0" prefWidth="548.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 25px; -fx-background-radius: 25px;">
+            <children>
+                <Label fx:id="rbLBL" alignment="CENTER" layoutY="41.0" prefHeight="25.0" prefWidth="241.0" text="CUANTOS DEPARTAMENTOS">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font></Label>
+                <ComboBox fx:id="selectCMB" disable="true" layoutX="282.0" layoutY="48.0" prefHeight="38.0" prefWidth="255.0" style="-fx-background-color: #F05700; -fx-background-radius: 15px; -fx-border-radius: 15px;" />
+                <Label layoutX="33.0" layoutY="64.0" text="QUIERE ANALIZAR:">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane fx:id="pane4" disable="true" layoutY="404.0" prefHeight="276.0" prefWidth="600.0">
+            <children>
+                <ComboBox fx:id="taskCMB" layoutX="372.0" layoutY="22.0" onAction="#taskCMBAction" prefHeight="25.0" prefWidth="194.0" style="-fx-border-color: #F05700; -fx-border-width: 2px; -fx-border-radius: 15px; -fx-background-radius: 15px;" />
+                <ListView fx:id="displayLV" layoutX="26.0" layoutY="86.0" prefHeight="176.0" prefWidth="548.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 25px; -fx-border-radius: 25px; -fx-background-radius: 25px; -fx-border-color: #F05700; -fx-border-width: 2px;" />
+                <Label fx:id="taskLBL" alignment="CENTER" layoutX="21.0" layoutY="25.0" prefHeight="17.0" prefWidth="255.0" text="QUE DATOS QUIERE CONSULTAR:" textAlignment="CENTER">
+                    <font>
+                        <Font name="MS Outlook" size="14.0" />
+                    </font></Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
